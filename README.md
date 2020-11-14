@@ -1,2 +1,2 @@
 # friday-the-13th
-static page to find the next friday the 13th
+find out when the next friday the 13th will happen!!

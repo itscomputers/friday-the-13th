@@ -16,9 +16,8 @@ Date.prototype.moveToFridayThe13th = function(direction) {
   this.moveToFriday(direction);
   if (this.getDate() === 13) {
     return this;
-  } else {
-    return this.moveToFridayThe13th(direction);
   }
+  return this.moveToFridayThe13th(direction);
 }
 
 const date = new Date();

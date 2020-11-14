@@ -10,7 +10,12 @@ article.friday-the-13th {
 	margin: 0 auto;
 }
 
-nav, footer {
+footer {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+aside > nav {
 	max-width: 900px;
 	margin: 0 auto;
 }

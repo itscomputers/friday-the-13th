@@ -2,7 +2,7 @@ const offset = (date, direction) => {
   if (direction === 'next') {
     return -date.getDay() + ((date.getDay() < 5) ? 5 : 12);
   } else if (direction === 'prev') {
-    return -date.getDay() + ((date.getDay() > 4) ? 5 : -2);
+    return -date.getDay() + ((date.getDay() > 5) ? 5 : -2);
   }
   return 0;
 };

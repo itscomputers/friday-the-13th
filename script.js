@@ -32,5 +32,16 @@ const moveToFridayThe13th = (direction) => {
   updateDateOnWindow();
 }
 
+document.body.addEventListener('keydown', function(event) {
+  switch (event.key) {
+    case "ArrowLeft":
+      moveToFridayThe13th('prev');
+      break;
+    case "ArrowRight":
+      moveToFridayThe13th('next');
+      break;
+  }
+});
+
 updateDateOnWindow();
 

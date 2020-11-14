@@ -27,7 +27,7 @@ const updateDateOnWindow = () => {
   document.getElementById('date').textContent = date.toDateString();
 };
 
-const moveTo = (direction) => {
+const moveToFridayThe13th = (direction) => {
   date.moveToFridayThe13th(direction);
   updateDateOnWindow();
 }

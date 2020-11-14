@@ -1,17 +1,17 @@
 #date {
-	font-weight: bold;
-	font-family: "Source-Code-Pro", monospace;
-	font-size: 2em;
+  font-weight: bold;
+  font-family: "Source-Code-Pro", monospace;
+  font-size: 2em;
 }
 
 article.friday-the-13th {
-	max-width: 500px;
-	text-align: center;
-	margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-nav, footer {
-	max-width: 900px;
-	margin: 0 auto;
+footer {
+  max-width: 900px;
+  margin: 0 auto;
 }
 

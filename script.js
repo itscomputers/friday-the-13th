@@ -2,7 +2,7 @@ const offset = (date, direction) => {
   if (direction === 'next') {
     return -date.getDay() + ((date.getDay() < 5) ? 5 : 12);
   } else if (direction === 'prev') {
-    return -date.getDay() + ((date.getDay() > 5) ? -2 : -9);
+    return -date.getDay() + ((date.getDay() > 4) ? 5 : -2);
   }
   return 0;
 };
@@ -21,7 +21,6 @@ Date.prototype.moveToFridayThe13th = function(direction) {
 }
 
 const date = new Date();
-date.moveToFridayThe13th('next');
 
 const updateDateOnWindow = () => {
   document.getElementById('date').textContent = date.toDateString();
@@ -43,5 +42,5 @@ document.body.addEventListener('keydown', function(event) {
   }
 });
 
-updateDateOnWindow();
+moveToFridayThe13th('next');
 

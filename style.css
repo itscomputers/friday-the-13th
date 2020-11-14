@@ -4,6 +4,10 @@
   font-size: 2em;
 }
 
+#source-code {
+  text-align: right;
+}
+
 article.friday-the-13th {
   max-width: 500px;
   text-align: center;

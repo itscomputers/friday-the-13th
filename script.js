@@ -44,3 +44,22 @@ document.body.addEventListener('keydown', function(event) {
 
 moveToFridayThe13th('next');
 
+// tests
+
+// tests that from a friday 13th to the next/prev, all of the dates have the expected next/prev.
+const testFridayThe13th = (startingDate, direction, expected) => {
+  const testDate = new Date(startingDate);
+  const expectedString = new Date(expected).toDateString();
+
+  while (testDate.toDateString() !== expectedString) {
+    const localDate = new Date(testDate);
+    if (localDate.moveToFridayThe13th(direction).toDateString() !== expectedString) {
+      console.log(`failed on ${testDate.toDateString()}: got ${localDate.toDateString()}, expected ${expected}`);
+    }
+    testDate.setDate(testDate.getDate() + (direction === 'next' ? 1 : -1));
+  }
+}
+
+// testFridayThe13th('Nov 13 2020', 'next', 'Aug 13 2021');
+// testFridayThe13th('Aug 13 2021', 'prev', 'Nov 13 2020');
+

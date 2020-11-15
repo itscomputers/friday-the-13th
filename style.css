@@ -5,13 +5,17 @@
 }
 
 #source-code {
-  text-align: right;
+  margin-top: 30px;
 }
 
 article.friday-the-13th {
   max-width: 500px;
   text-align: center;
   margin: 0 auto;
+}
+
+article {
+  margin: 0 10px 0;
 }
 
 footer {

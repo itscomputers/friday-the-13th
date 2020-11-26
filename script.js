@@ -33,6 +33,10 @@ Date.prototype.moveToFridayThe13th = function(direction) {
 
 //----------------------------
 // dom management
+
+const today = new Date();
+document.getElementById('is-it-today').textContent = today.isFridayThe13th() ? 'yes' : 'no';
+
 const date = new Date();
 
 const updateDateOnWindow = () => {
@@ -43,6 +47,20 @@ const moveToFridayThe13th = (direction) => {
   date.moveToFridayThe13th(direction);
   updateDateOnWindow();
 };
+
+const toggleSection = (prefix) => {
+  ['is-it', 'when-is', 'how-often-is'].forEach(localPrefix => {
+    const button = document.getElementById(`${localPrefix}-button`);
+    const article = document.getElementById(`${localPrefix}-friday-the-13th`);
+    if (prefix === localPrefix) {
+      button.classList.add('highlighted');
+      article.classList.remove('hidden');
+    } else {
+      button.classList.remove('highlighted');
+      article.classList.add('hidden');
+    }
+  });
+}
 
 document.body.addEventListener('keydown', function(event) {
   switch (event.key) {
@@ -55,7 +73,9 @@ document.body.addEventListener('keydown', function(event) {
   }
 });
 
-moveToFridayThe13th('next');
+if (!date.isFridayThe13th()) {
+  moveToFridayThe13th('next');
+}
 
 //----------------------------
 // tests

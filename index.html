@@ -30,64 +30,73 @@
     </aside>
 
     <main>
-      <article class="friday-the-13th">
-        <h1>when is friday the 13th??</h1>
+      <h1>friday the 13th</h1>
 
-        <p id="date"></p>
-
-        <section>
-          <button id="prev" onclick="moveToFridayThe13th('prev')">previous</button>
-          <button id="next" onclick="moveToFridayThe13th('next')">next</button>
+      <div class="questions">
+        <section class="buttons">
+          <button id="is-it-button" class="highlighted" onclick="toggleSection('is-it')">today?</button>
+          <button id="when-is-button" onclick="toggleSection('when-is')">when?</button>
+          <button id="how-often-is-button" onclick="toggleSection('how-often-is')">how often?</button>
         </section>
 
-      </article>
+        <article class="" id="is-it-friday-the-13th">
+          <h2>is it today??</h2>
+          <p id="is-it-today"></p>
+        </article>
 
-      <hr>
+        <article class="hidden" id="when-is-friday-the-13th">
+          <h2>when is it??</h2>
+          <p id="date"></p>
 
-      <article class="years">
-        <h2>how many are there in a year??</h2>
+          <section class="buttons">
+            <button id="prev" onclick="moveToFridayThe13th('prev')">prev</button>
+            <button id="next" onclick="moveToFridayThe13th('next')">next</button>
+          </section>
+        </article>
 
-        <p>there can be 1, 2, or 3 friday the 13th's in a given year.</p>
+        <article class="hidden" id="how-often-is-friday-the-13th">
+          <h2>how often is it??</h2>
 
-        <section>
-          <p>in a non-leap year, the possibilites are:</p>
-          <ul>
-            <li>jan &rarr; oct</li>
-            <li>feb &rarr; mar &rarr; nov</li>
-            <li>apr &rarr; july</li>
-            <li>may</li>
-            <li>june</li>
-            <li>aug</li>
-            <li>sept &rarr; dec</li>
-          </ul>
-        </section>
+          <p>there can be 1, 2, or 3 friday the 13th's in a given year.</p>
 
-        <section>
-          <p>in a leap year, the possibilites are:</p>
-          <ul>
-            <li>jan &rarr; apr &rarr; july</li>
-            <li>feb &rarr; aug</li>
-            <li>mar &rarr; nov</li>
-            <li>may</li>
-            <li>june</li>
-            <li>sept &rarr; dec</li>
-            <li>oct</li>
-          </ul>
-        </section>
+          <section>
+            <p>in a non-leap year, the possibilites are:</p>
+            <ul>
+              <li>jan &rarr; oct</li>
+              <li>feb &rarr; mar &rarr; nov</li>
+              <li>apr &rarr; july</li>
+              <li>may</li>
+              <li>june</li>
+              <li>aug</li>
+              <li>sept &rarr; dec</li>
+            </ul>
+          </section>
 
-        <section>
-          <p>
-            notice that there are only two changes
-            from the non-leap year options to the leap year options:
-          </p>
-          <ul>
-            <li>january leaves october to join the april/july pair.</li>
-            <li>february leaves the february/march/november trio to join august.</li>
-          </ul>
-        </section>
-      </article>
+          <section>
+            <p>in a leap year, the possibilites are:</p>
+            <ul>
+              <li>jan &rarr; apr &rarr; july</li>
+              <li>feb &rarr; aug</li>
+              <li>mar &rarr; nov</li>
+              <li>may</li>
+              <li>june</li>
+              <li>sept &rarr; dec</li>
+              <li>oct</li>
+            </ul>
+          </section>
 
-      <hr>
+          <section>
+            <p>
+              notice that there are only two changes
+              from the non-leap year options to the leap year options:
+            </p>
+            <ul>
+              <li>january leaves october to join the april/july pair.</li>
+              <li>february leaves the february/march/november trio to join august.</li>
+            </ul>
+          </section>
+        </article>
+      </div>
 
       <article>
         <p id="source-code">

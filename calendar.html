@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>friday the 13th</title>
+
+    <link rel="stylesheet" type="text/css" href="https://www.itscomputers.lol/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://ebe.itscomputers.lol/static/style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo:400,300,700,800,600">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,800,600">
+
+    <script src="./calendar.js" defer></script>
+  </head>
+
+  <body>
+    <aside>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="https://itscomputers.lol">its computers</a></li>
+            <li><a href="https://ebe.itscomputers.lol">ebe</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <main>
+      <p>
+        <a href="index.html">&larr; back to friday the 13th</a>
+      </p>
+
+      <h1>13-month calendar</h1>
+
+      <p>
+        Since<code> 365 = 28 * 13 + 1, </code>a 13-month calendar where each
+        month has 28 days each is a great way for months and weeks to be
+        perfectly compatible.
+      </p>
+
+      <div id="calendar-cards" class="cards">
+        <section class="buttons">
+          <button id="calendar-button" class="highlighted" onclick="toggleSection('calendar')">calendar</button>
+          <button id="faq-button" onclick="toggleSection('faq')">faq</button>
+        </section>
+
+        <article id="calendar">
+          <h2>calendar</h2>
+          <p id="today-is"></p>
+
+          <h3>january</h3>
+          <table id="january"></table>
+          <h3>february</h3>
+          <table id="february"></table>
+          <h3>march</h3>
+          <table id="march"></table>
+          <h3>april</h3>
+          <table id="april"></table>
+          <h3>may</h3>
+          <table id="may"></table>
+          <h3>june</h3>
+          <table id="june"></table>
+          <h3>july</h3>
+          <table id="july"></table>
+          <h3>august</h3>
+          <table id="august"></table>
+          <h3>september</h3>
+          <table id="september"></table>
+          <h3>october</h3>
+          <table id="october"></table>
+          <h3>november</h3>
+          <table id="november"></table>
+          <h3>december</h3>
+          <table id="december"></table>
+          <h3>triskaidektober</h3>
+          <table id="triskaidektober"></table>
+        </article>
+
+        <article id="faq" class="hidden">
+          <h2>faq</h2>
+
+          <ul class="faq">
+            <li class="one-faq">
+              <strong>What is the main benefit??</strong>
+              With months and weeks compatible, the 10th day of every month for an
+              entire year will land on the same day of the week.  If someone invites
+              you to an event on like June 10th, you'll know it's a Wednesday or
+              whatever because every 10th is a Wednesday this year.  The extra day
+              will shift what day of the week the 10th occurs on the following year.
+            </li>
+
+            <li class="one-faq">
+              <strong>What about the extra day??</strong>
+              We either call it New Years Eve or New Years Day and it doesn't have a
+              month attached to it and we put it as either the first or last day of
+              the year.  This is one of the things the world calendar committee will
+              be tasked with deciding.  I'll put it as the last day of the year for
+              this version.
+            </li>
+
+            <li class="one-faq">
+              <strong>What about leap year??</strong>
+              This one is easy, we just have New Years Eve (or New Years Day) last
+              for two days.  Legally, both days count as one day.
+            </li>
+
+            <li class="one-faq">
+              <strong>Isn't 13 months unlucky??</strong>
+              Maybe.  It might be spookier than ever or it might dampen 13's
+              reputation for being unlucky.  To enhance whatever impact this has
+              on the number 13, it is important to notice that every 5 or 6 years
+              there will be 13 straight friday the 13ths.  Which is probably
+              cool.
+            </li>
+          </ul>
+        </article>
+      </div>
+      <p>&nbsp;</p>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="https://github.com/itscomputers">github/ itscomputers</a></li>
+        <li><a href="https://twitter.com/its_computers">twitter/ its_computers</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
+

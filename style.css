@@ -51,8 +51,10 @@
 
 .table-container {
   overflow-x: auto;
-  display: flex;
-  justify-content: center;
+}
+
+.table-container > table {
+  margin: auto;
 }
 
 footer {

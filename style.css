@@ -51,6 +51,8 @@
 
 .table-container {
   overflow-x: auto;
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -72,6 +74,3 @@ td.active {
   justify-content: center;
 }
 
-#calendar > table {
-  margin: 0 auto;
-}

@@ -1,10 +1,11 @@
 //----------------------------
 // calendar generator
 
-Date.prototype.absoluteDate = function() {
-  const value = this.valueOf();
-  const perDay = 24 * 60 * 60 * 1000;
-  return (value - (value % perDay)) / perDay;
+Date.prototype.dayOfYear = function() {
+  const now = Date.UTC(this.getFullYear(), this.getMonth(), this.getDate());
+  const januaryFirst = Date.UTC(this.getFullYear(), 0, 0);
+  const diff = now - januaryFirst;
+  return diff / 24 / 60 / 60 / 1000;
 }
 
 const months = [
@@ -24,9 +25,8 @@ const months = [
 ];
 
 const today = new Date();
-const januaryFirst = new Date(`Jan 1 ${today.getFullYear()}`);
 
-const dayOfYear = today.absoluteDate() - januaryFirst.absoluteDate();
+const dayOfYear = today.dayOfYear();
 const todayDate = dayOfYear % 28;
 const todayMonth = months[(dayOfYear - todayDate) / 28];
 
@@ -47,8 +47,7 @@ const generateHeader = table => {
 }
 
 const generateBody = table => {
-  const dayOfTheYear = today.absoluteDate() - januaryFirst.absoluteDate();
-  const firstDay = januaryFirst.getDay();
+  const firstDay = new Date(today.getFullYear(), 0, 0).getDay();
   const daysInFirstWeek = 7 - firstDay;
   const weeks = firstDay === 0 ? 4 : 5;
   const dayNumber = (week, day) => (
